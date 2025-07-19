@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios"; // Added axios import
 import WeatherCard from "./components/WeatherCard";
-import SearchBar from "./components/SearchBAr";
+import SearchBar from "./components/SearchBar";
 import ThemeToggle from "./components/ThemeToggle";
 import LoadingAnimation from "./components/LoadingAnimation";
 
@@ -51,7 +51,8 @@ export default function App() {
         `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric`
       );
       setWeather(response.data);
-    } catch (err) {
+    } catch (error) {
+      console.log(error)
       setError("City not found. Please check the spelling and try again.");
       setWeather(null);
     } finally {
