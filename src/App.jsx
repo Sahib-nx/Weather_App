@@ -140,7 +140,7 @@ export default function App() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center text-text-secondary text-sm mt-8"
         >
-          <p>Built with React, Framer Motion & Lucide Icons</p>
+          
         </motion.div>
       </div>
     </div>
